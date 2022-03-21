@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <style type="text/css">
+        .done {
+            text-decoration: line-through;
+        }
+        p{  
+            
+         }
+
+         
+    button#done{margin:10px 
+    }
+
+    div#list{background-color:#696969	;
+           color:white;
+            font-size:30px;
+            padding:20px;
+            text-align:center;
+
+    }
+
+    body{
+      text-align:center;
+    }
+    input[type="checkbox"]{
+      position:relative;
+      top:2px;
+    }
+    div#addd{
+      color:black;
+      font-size:30px;
+      text-align:center;
+      margin-right:90px;
+    }
+
+   div#to{
+     color:blue
+   }
+   li{
+     text-align:center;
+     list-style:none;
+   }
+    </style>
+</head>
+<body>
+  
+   <ul>
+     <div id="addd">
+       <p>Todo追加</p>
+
+      </div>
+     <label ><input type="text" id="text"name="id"></label> 
+     <button id ="add">追加</button>
+    
+   </ul> 
+   
+
+<div id="list">
+   <ul class="lists" id="listarea">
+     
+     <div id ="to">
+     <!--<input id="box" type="checkbox" />-->
+      Todo一覧<button id ="done">DONE</button>
+     </div>
+    </ul>
+</div>
+<script src="todo.js"></script>
+</body>
+</html>
