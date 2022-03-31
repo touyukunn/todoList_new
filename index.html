@@ -49,10 +49,35 @@
      text-align:center;
      list-style:none;
    }
+   #view_time{
+    text-align:left;
+    position: relative;
+}
+ 
+#view_time::before {
+  content:"";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent 0%, #f5ff00 60%);
+  animation: underlineAnim 10s ease-in infinite;
+  z-index: -1;
+}
+ @keyframes underlineAnim {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: 90;
+  }
+}
     </style>
 </head>
 <body>
-  
+  <div id="view_time"></div>
+
    <ul>
      <div id="addd">
        <p>Todoリスト</p>
