@@ -61,7 +61,7 @@ function getNow() {
 	var sec = now.getSeconds();
 
 	//出力用
-	var s = year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" + sec + "秒"; 
+	var s = year + "年" + mon + "月" + day + "日" +"  "+ hour + ":" + min + ":" + sec + ""; 
 	return s;
 };
  
