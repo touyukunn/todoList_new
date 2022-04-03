@@ -49,22 +49,33 @@ donebt.addEventListener('click',function(){
 
 });
 
-document.getElementById("view_time").innerHTML = getNow();
+function set2fig(num) {
+  // 桁数が1桁だったら先頭に0を加えて2桁に調整する
+  var ret;
+  if( num < 10 ) { ret = "0" + num; }
+  else { ret = num; }
+  return ret;
+}
+
+
 
 function getNow() {
 	var now = new Date();
 	var year = now.getFullYear();
 	var mon = now.getMonth()+1; //１を足すこと
 	var day = now.getDate();
-	var hour = now.getHours();
-	var min = now.getMinutes();
-	var sec = now.getSeconds();
+	var hour = set2fig( now.getHours() );
+	var min = set2fig( now.getMinutes() );
+	var sec =  set2fig( now.getSeconds() );
 
 	//出力用
-	var s = year + "年" + mon + "月" + day + "日" +"  "+ hour + ":" + min + ":" + sec + ""; 
-	return s;
+	var s = year + "年" + mon + "月" + day + "日"; 
+  var ss = hour + ":" + min + ":" + sec + "";
+ document.getElementById("view_day").innerHTML = s;
+ document.getElementById("view_time").innerHTML = ss;
 };
  
+setInterval('getNow()',1000);
 
 
 

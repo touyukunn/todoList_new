@@ -12,7 +12,8 @@
         
 
          
-    button#done{margin:10px 
+    button#done
+    {margin:10px 
     }
 
     div#list{background-color:#696969	;
@@ -49,9 +50,17 @@
      text-align:center;
      list-style:none;
    }
-   #view_time{
+   #view_time
+   {
     text-align:left;
     position: relative;
+    
+    font-size: 35px;
+    color:white
+  }
+#view_day{
+  text-align: left;
+  color:blue
 }
  
 #view_time::before {
@@ -62,20 +71,22 @@
   left: 0;
   right: 0;
   background: linear-gradient(transparent 0%, #6dce82 60%);
-  animation: underlineAnim 5s ease-in infinite;
+  animation: underlineAnim 2s ease-in infinite;
   z-index: -1;
+  
 }
  @keyframes underlineAnim {
   0% {
     right: 100%;
   }
   100% {
-    right: 86%;
+    right: 90%;
   }
 }
     </style>
 </head>
 <body>
+  <div id="view_day"></div>
   <div id="view_time"></div>
 
    <ul>
@@ -93,8 +104,8 @@
    <ul class="lists" id="listarea">
      
      <div id ="to">
-     <!--<input id="box" type="checkbox" />-->
-      Todo一覧<button id ="done">DONE</button>
+     <p>Todo一覧</p>
+     <button id ="done">DONE</button>
      </div>
     </ul>
 </div>
